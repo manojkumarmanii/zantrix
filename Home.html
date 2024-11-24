@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="pngwing.com.png" type="image/x-icon" style="object-fit: contain;">
+    <title>Zantrix</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+      
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="blackbg"></div>
+    <div class="search">
+        <form>
+            <input type="text" placeholder=" search items ">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #74C0FC;"></i></button>
+        </form>
+    </div>
+   
+    <nav class="navbar">
+        <div class="cart-icon">
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-arrow-down" style="color: #e6df0a;"></i>
+                <span id="cart-badge">0</span>
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar">
+        <div class="cart-icon">
+            <a href="wishlist.html">
+                <i class="fa-solid fa-heart" style="color: red;position: absolute;top: -65px;right: 65px;"></i>
+            </a>
+        </div>
+    </nav>
+
+
+    <button style="font-size: x-large;position: absolute;right:10px;top: 1px;border:none;background: none;"><a
+            href="settings.html"><i class="fa-solid fa-gear"></i></a></button>
+    <div class="topp">
+        <li class="nav-item dropdown">
+        <li><a href="#">Home</a></li>
+        <li><a href="toptranding.html">Top Tranding</a></li>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Fashion</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mens.html">Mens</a></li>
+            <li><a class="dropdown-item" href="woman.html">Woman</a></li>
+            <li><a class="dropdown-item" href="kids.html">Kids</a></li>
+        </ul>
+        <li><a href="mobiles.html">Mobiles</a></li>
+        <li><a href="kitchen.html">Kitchen</a></li>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Electronics</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="tv.html">TV</a></li>
+            <li><a class="dropdown-item" href="labtops.html">Laptops</a></li>
+            <li><a class="dropdown-item" href="camara.html">camara</a></li>
+        </ul>
+        <li><a href="beauty.html">Beauty</a></li>
+        <li><a href="contact.html">contact</a></li>
+        </li>
+    </div>
+    <div class="country">
+        <select class="country-select">
+            <option selected>Select a Country</option>
+            <option value="1">India</option>
+            <option value="2">USA</option>
+            <option value="3">UK</option>
+            <option value="4">Canada</option>
+            <option value="5">Japan</option>
+            <option value="6">Australia</option>
+            <option value="7">Brazil</option>
+            <option value="8">France</option>
+            <option value="9">South Africa</option>
+        </select>
+    </div>
+    <div id="swipe" class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                  <img src="sl_042921_42480_78.jpg" class="d-block w-100 clickable-image" alt="Los Angeles" style="width:100%;height:340px;">
+                </div>
+              
+                <div class="item">
+                  <img src="sl_042921_42480_33.jpg" class="d-block w-100 clickable-image" alt="Chicago" style="width:100%;height: 340px;">
+                </div>
+              
+                <div class="item">
+                  <img src="slide-1.webp" class="d-block w-100 clickable-image" alt="New York" style="width:100%;height: 340px;">
+                </div>
+              </div>
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="logo">
+        <img src="pngwing.com.png" alt="">
+    </div>
+    <p class="webname">Zantrix.com</p>
+
+    <h1 class="productlist">Best of Electronics</h1>
+    <div class="products">
+        <div class="product" data-id="1" data-name="ASUS Vivobook 16" data-price="150" data-image="asus.jpg">
+            <a href="asus.html" class="product-link">
+                <img src="asus.jpg" alt="" class="product-image">
+                <h2>ASUS Vivobook 16</h2>
+                <p>Price: $150</p>
+            </a>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-alt"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="1" data-name="ASUS Vivobook 16" data-price="150"
+                    data-image="asus.jpg">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="product" data-id="2" data-name="Smart Watch" data-price="500" data-image="download.jpg">
+            <a href="smartwatch.html" class="product-link">
+                <img src="download.jpg" alt="Smart Watch" class="product-image">
+                <h2>Smart Watch</h2>
+                <p>Price: $500</p>
+            </a>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="2" data-name="Smart Watch" data-price="500"
+                    data-image="download.jpg">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="product" data-id="3" data-name="Iphone" data-price="1550" data-image="images.jpg">
+            <a href="iphone.html" class="product-link">
+                <img src="images.jpg" alt="Iphone 15" class="product-image">
+                <h2>Iphone 15pro max</h2>
+                <p>Price: $1550</p>
+            </a>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="3" data-name="Iphone" data-price="1550"
+                    data-image="images.jpg">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="product" data-id="4" data-name="Samsung S23" data-price="100" data-image="images (1).jpg">
+            <a href="samsung.html" class="product-link">
+                <img src="images (1).jpg" alt="Samsung S23" class="product-image">
+                <h2>Samsung S23</h2>
+                <p>Price: $100</p>
+            </a>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-alt"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="4" data-name="Samsung S23" data-price="100"
+                    data-image="images (1).jpg">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="product" data-id="5" data-name="Macbook M1 Air" data-price="1150" data-image="pngegg.png">
+            <a href="macbook.html" class="product-link">
+                <img src="pngegg.png" alt="Macbook M1 Air" class="product-image">
+                <h2>Macbook M1 Air</h2>
+                <p>Price: $1150</p>
+            </a>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="5" data-name="Macbook M1 Air" data-price="1150"
+                    data-image="pngegg.png">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="product" data-id="6" data-name="AirPods Pro" data-price="250"
+            data-image="51fkoZe-K6L._AC_UF1000,1000_QL80_.jpg">
+            <a href="airpods.html" class="product-link">
+                <img src="51fkoZe-K6L._AC_UF1000,1000_QL80_.jpg" alt="AirPods Pro" class="product-image">
+                <h2>AirPods Pro</h2>
+                <p>Price: $250</p>
+            </a>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="6" data-name="AirPods Pro" data-price="250"
+                    data-image="51fkoZe-K6L._AC_UF1000,1000_QL80_.jpg">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="list2name">Best of Kitchen</h1>
+
+    <div class="list2">
+        <div class="product-in" data-id="7" data-name="Preethi Zodiac Mixer GrHomer" data-price="150"
+            data-image="pngwing.com (2).png">
+            <a href="mixer.html" class="product-link">
+                <img src="pngwing.com (2).png" alt="Preethi Zodiac Mixer GrHomer" class="product-image">
+                <h2>Preethi Zodiac Mixer GrHomer</h2>
+                <p>Price: $150</p>
+            </a>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <button class="add-to-carts">Add to Cart</button>
+            <button style="position: relative;right: -140px;  
+        bottom: 20px; top: -35px; 
+        background-color: #f57c00;
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 5px;
+       padding: 8px 12px;" class="add-to-wishlist" data-id="7" data-name="Preethi Zodiac Mixer GrHomer"
+                data-price="150" data-image="pngwing.com (2).png">
+                <i class="fa-solid fa-heart"></i>
+            </button>
+        </div>
+
+        <div class="product-in" data-id="8" data-name="RO water purifier" data-price="1100" data-image="ro">
+            <a href="ro.html" class="product-link">
+                <img src="ro" alt="RO water purifier" class="product-image">
+                <h2>RO Water Purifier</h2>
+                <p>Price: $1100</p>
+            </a>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <button class="add-to-carts">Add to Cart</button>
+            <button style="position: relative;right: -140px; 
+        top: -35px; 
+        background-color: #f57c00;
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 5px;
+       padding: 8px 12px;" class="add-to-wishlist" data-id="8" data-name="RO Water Purifier" data-price="1100"
+                data-image="ro">
+                <i class="fa-solid fa-heart"></i>
+            </button>
+        </div>
+
+        <div class="product-in" data-id="9" data-name="Sandwich Maker" data-price="550" data-image="sanwichmakker.jpg">
+            <a href="sanwitch.html" class="product-link">
+                <img src="sanwichmakker.jpg" alt="Sandwich Maker" class="product-image">
+                <h2>Sandwich Maker</h2>
+                <p>Price: $550</p>
+            </a>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <button class="add-to-carts">Add to Cart</button>
+            <button style="position: relative;right: -140px;  
+        background-color: #f57c00; top: -35px; 
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 5px;
+       padding: 8px 12px;" class="add-to-wishlist" data-id="9" data-name="Sandwich Maker" data-price="550"
+                data-image="sanwichmakker.jpg">
+                <i class="fa-solid fa-heart"></i>
+            </button>
+        </div>
+
+        <div class="product-in" data-id="10" data-name="Agroregency Air" data-price="1200"
+            data-image="agroregency air.jpg">
+            <a href="agroregency.html" class="product-link">
+                <img src="agroregency air.jpg" alt="Agroregency Air" class="product-image">
+                <h2>Agroregency Air</h2>
+                <p>Price: $1200</p>
+            </a>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <button class="add-to-carts">Add to Cart</button>
+            <button style="position: relative;right: -140px;  
+        background-color: #f57c00; top: -35px; 
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 5px;
+       padding: 8px 12px;" class="add-to-wishlist" data-id="10" data-name="Agroregency Air" data-price="1200"
+                data-image="agroregency air.jpg">
+                <i class="fa-solid fa-heart"></i>
+            </button>
+        </div>
+
+        <div class="product-in" data-id="11" data-name="Microoven" data-price="2250" data-image="microoven.jpg">
+            <a href="microoven.html" class="product-link">
+                <img src="microoven.jpg" alt="Microoven" class="product-image">
+                <h2>Microoven</h2>
+                <p>Price: $2250</p>
+            </a>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <button class="add-to-carts">Add to Cart</button>
+            <button style="position: relative;right: -140px;  
+        background-color: #f57c00; top: -35px; 
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 5px;
+       padding: 8px 12px;" class="add-to-wishlist" data-id="11" data-name="Microoven" data-price="2250"
+                data-image="microoven.jpg">
+                <i class="fa-solid fa-heart"></i>
+            </button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>About Us</h4>
+                <p>Your go-to platform for the best deals, premium products, and fast delivery. Shop your favorite items at unbeatable prices!</p>
+            </div>
+
+            <div class="footer-support">
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Shop Now</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Zantrix E-Commerce Store | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        
+    </script>
+   
+   
+    <script src="search.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+</body>
+
+</html>

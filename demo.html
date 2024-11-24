@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Products</title>
+  <style>
+    .product-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      width: 150px;
+    }
+    .hidden {
+      display: none;
+    }
+    .search-bar {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <button id="searchButton">🔍</button>
+  </div>
+
+  <div class="product-box" id="productBox">
+    <!-- Product cards will be dynamically added here -->
+  </div>
+
+  <script>
+    // Sample product data
+    const products = [
+    { name: "iPhone 15", image: "images.jpg" },
+            { name: "MacBook Air", image: "pngegg.png" },
+            { name: "samsung", image: "images (1).jpg" },
+            { name: "airpods pro", image: "51fkoZe-K6L._AC_UF1000,1000_QL80_.jpg" },
+            { name: "asus laptop ", image: "asus.jpg" },
+            { name: "smart watch", image: "download.jpg" },
+            { name: "mixer", image: "pngwing.com (2).png" },
+            { name: "RO", image: "ro" },
+            { name: "sanwitch maker", image: "sanwichmakker.jpg" },
+            { name: "agroregency", image: "agroregency air.jpg" },
+            { name: "microoven", image: "microoven.jpg" },
+  ];
+
+    // Display products dynamically
+    const productBox = document.getElementById("productBox");
+
+    function displayProducts(products) {
+      productBox.innerHTML = ""; // Clear existing products
+      products.forEach(product => {
+        const card = document.createElement("div");
+        card.classList.add("product-card");
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <p>${product.name}</p>
+        `;
+        productBox.appendChild(card);
+      });
+    }
+
+    // Initial display
+    displayProducts(products);
+
+    // Add search functionality
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    searchButton.addEventListener("click", () => {
+      const query = searchInput.value.toLowerCase();
+      const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(query)
+      );
+      displayProducts(filteredProducts);
+    });
+  </script>
+</body>
+</html>
+<button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #74C0FC;"></i></button>

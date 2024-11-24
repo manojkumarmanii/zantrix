@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Now</title>
+   <link rel="shortcut icon" href="pngwing.com.png" type="image/x-icon" style="object-fit: contain;">
+    <title>zantrix</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 60px;
+      left: 300px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #ff5722;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e64a19;
+    }
+
+    .summary {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .summary h2 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .summary p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+  <script>
+    // JavaScript to dynamically load product details from the URL
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productName = urlParams.get('product') || "Unknown Product";
+      const productPrice = urlParams.get('price') || "0";
+
+      document.getElementById('product-name').innerText = productName;
+      document.getElementById('product-price').innerText = `₹${productPrice}`;
+    };
+  </script>
+</head>
+<body>
+    
+ 
+
+<div class="container">
+  <h1>Buy Now</h1>
+
+  <!-- Order Summary Section -->
+  <div class="summary">
+    <h2>Order Summary</h2>
+    <p><strong>Product:</strong> <span id="product-name"></span></p>
+    <p><strong>Price:</strong> <span id="product-price"></span></p>
+    <p><strong>Delivery:</strong> Free Delivery</p>
+  </div>
+
+  <!-- Form Section -->
+  <form action="payment.html" method="POST">
+    <label for="full-name">Full Name</label>
+    <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+
+    <label for="address">Shipping Address</label>
+    <textarea id="address" name="address" placeholder="Enter your full address" required></textarea>
+
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" placeholder="Enter your state" required>
+
+    <label for="zip">ZIP Code</label>
+    <input type="text" id="zip" name="zip" placeholder="Enter your ZIP code" required>
+
+    <label for="payment-method">Payment Method</label>
+    <select id="payment-method" name="payment_method" required>
+      <option value="credit-card">Credit/Debit Card</option>
+      <option value="net-banking">Net Banking</option>
+      <option value="upi">UPI</option>
+      <option value="cod">Cash on Delivery</option>
+    </select>
+
+    <button type="submit">Proceed to Payment</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Suggestions</title>
+    <style>
+      
+        .search-container {
+            margin-bottom: 20px;
+        }
+        #searchInput {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .suggestions-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+        .suggestion-card {
+            min-width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .suggestion-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .suggestion-card h4 {
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for products..." oninput="showSuggestions()">
+    </div>
+    <div id="suggestions" class="suggestions-container"></div>
+
+    <script>
+        // Sample product list
+        const products = [
+            { name: "iPhone 15", image: "images.jpg" },
+            { name: "MacBook Air", image: "pngegg.png" },
+            { name: "samsung", image: "images (1).jpg" },
+            { name: "airpods pro", image: "51fkoZe-K6L._AC_UF1000,1000_QL80_.jpg" },
+            { name: "asus laptop ", image: "asus.jpg" },
+            { name: "smart watch", image: "download.jpg" },
+            { name: "mixer", image: "pngwing.com (2).png" },
+            { name: "RO", image: "ro" },
+            { name: "sanwitch maker", image: "sanwichmakker.jpg" },
+            { name: "agroregency", image: "agroregency air.jpg" },
+            { name: "microoven", image: "microoven.jpg" },
+
+        ];
+
+        // Function to display suggestions
+        function showSuggestions() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const suggestionsContainer = document.getElementById("suggestions");
+            suggestionsContainer.innerHTML = ""; // Clear previous suggestions
+
+            if (input) {
+                const filteredProducts = products.filter(product =>
+                    product.name.toLowerCase().includes(input)
+                );
+
+                filteredProducts.forEach(product => {
+                    const card = document.createElement("div");
+                    card.className = "suggestion-card";
+                    card.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <h4>${product.name}</h4>
+                    `;
+                    suggestionsContainer.appendChild(card);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
